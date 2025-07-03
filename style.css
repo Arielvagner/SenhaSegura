@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap');
 :root{
 
  --branco: white;
@@ -7,7 +7,13 @@
  --fundo-senha:#00244D;
  --fundo-texto:#001E40;
  --borda:#0075FF;
- --roboto:'roboto mono' monospace;
+ --roboto:'libertinus-mono-regular';
+ 
+.libertinus-mono-regular {
+  font-family: "Libertinus Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
 
 }
 
