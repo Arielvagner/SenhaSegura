@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap');
+
 :root{
 
  --branco: white;
@@ -19,12 +20,12 @@
 
 body{
     color:var(--borda)
-    backgroud-color:var(--cor-de-fundo)
+    backgroud-color:var(--cor-de-fundo);
     font-family: var(--roboto);
 }
 
 .titulo-secundario{
-    font-faamily: var(--roboto-mono);
+    font-family: var(--roboto);
     font-size: 32px;
 }
 
@@ -33,7 +34,7 @@ body{
 }
 
 .conteudo-titulo{
-    text-aling: center;
+    text-align: center;
     margin: top 80px;
 }
 
@@ -49,7 +50,7 @@ body{
 #campo-senha{
 
     background-color: var(--fundo-senha);
-    border: nome;
+    border: none;
     color: var(--branco);
     font-family: var(--roboto-mono);
     font-size: 40px;
