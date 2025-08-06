@@ -1,41 +1,42 @@
-const numeroSenha = document.querySelector('.parametro-senha_texto');
-let tamanhosenha = 12;
-numeroSenha.textContent = tamanhosenha;
-const LetrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const numeroSenha = document.querySelector('.parametro-senha__texto');
+let tamanhoSenha = 12;
+numeroSenha.textContent = tamanhoSenha;
+
+const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const letrasMinusculas = 'abcdefghijklmnopqrstuvwxyz';
 const numeros = '0123456789';
 const simbolos = '!@%*?';
-const botoes = document.querySelectorAll('.parametros-senha_botao');
+
+const botoes = document.querySelectorAll('.parametro-senha__botao');
 const campoSenha = document.querySelector('#campo-senha');
 const checkbox = document.querySelectorAll('.checkbox');
-const forcaSenha = document.querySelector('forca');
-
+const forcaSenha = document.querySelector('.forca');
 
 botoes[0].onclick = diminuiTamanho;
 botoes[1].onclick = aumentaTamanho;
 
 function diminuiTamanho(){
-    if (tamanhosenha >1 ){
-        tamanhosenha--;   
+    if(tamanhoSenha > 1){
+        tamanhoSenha--;
     }
-    numeroSenha.textContent = tamanhosenha;
+    numeroSenha.textContent = tamanhoSenha;
     geraSenha();
 }
 
 function aumentaTamanho(){
-    if(tamanhosenha < 20){
-        tamanhosenha++;
+    if(tamanhoSenha < 20){
+        tamanhoSenha++;
     }
-    numeroSenha.textContent = tamanhosenha;
+    numeroSenha.textContent = tamanhoSenha;
     geraSenha();
 }
+
 function geraSenha() {
     let alfabeto = '';
     if (checkbox[0].checked) alfabeto += letrasMaiusculas;
     if (checkbox[1].checked) alfabeto += letrasMinusculas;
     if (checkbox[2].checked) alfabeto += numeros;
     if (checkbox[3].checked) alfabeto += simbolos;
-
     if (alfabeto.length === 0) {
         campoSenha.value = '';
         classificaSenha(1);
@@ -65,5 +66,3 @@ function classificaSenha(tamanhoAlfabeto) {
     const valorEntropia = document.querySelector('.entropia');
     valorEntropia.textContent = "Um computador pode levar até " + Math.floor(2 ** entropia / (100e6 * 60 * 60 * 24)) + " dias para descobrir essa senha.";
 }
-
-geraSenha();
